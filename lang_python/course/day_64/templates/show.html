@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Complete list{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="overlay-text">
+      <h1>Here's a complete list of {{ DB }}</h1>
+    </div>
+    <hr>
+    <div class="row">
+      {% for row in data %}  
+          <div class="col-sm-3 mb-3 md-sm-0" >
+            <div class="card-show card" style="object-fit: contain;" >
+              <div class="front" style="background-image: url( {{ row.url }} ); ">
+              </div>
+              <div class="back">
+                <div class="title"> {{ row.Title }} </div>
+                <hr>
+                <div class="creator">
+                  <label>{{ row.Creator }}</label>
+                </div>
+                <hr>
+                <p class="review">{{ row.One_liner }}</p>
+                <hr>
+                <div>
+                  <a href="{{ url_for( 'update' , id=row.id , name=DB ) }}" class="button">Update</a>
+                  <a href="{{ url_for( 'delete' , id=row.id , name=DB ) }}" class="button delete-button">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

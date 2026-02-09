@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit {{ DB }}{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h1 class="heading">{{ name }}</h1>
+    <p class="description">Edit Movie Rating: {{ prat }}</p>
+    <form action="" method="POST">
+      <div class="mb-2">
+        <label class="form-label" >Enter the new rating</label>
+        <input type="floatformat" class="form-control" name="rating">
+      </div>
+      <div class="mb-2">
+        <label class="form-label" >Add a review!</label>
+        <input type="text" class="form-control" name="review">
+      </div>
+      <div class="mb-2">
+        <label class="form-label" >Change the url?</label>
+        <input type="text" class="form-control" name="url">
+      </div>
+      <button type="Submit" class="btn btn-outline-success btn-lg" >Update</button>
+    </form>
+  </div>
+{% endblock %}

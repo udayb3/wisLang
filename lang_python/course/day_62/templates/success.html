@@ -1,0 +1,23 @@
+<!-- Extending the base template for the pages -->
+{% extends "base.html"  %}
+
+<!-- Inserting the data in the title block -->
+{% block title %}
+	Success
+{% endblock %}
+
+<!-- Inserting the content of the success html file in the content block -->
+{% block content %}
+
+	<div class="container text-center">
+
+		<h2>Congratulations, your cafe has been registered.</h2>
+		<br>
+			<a class="btn btn-warning btn-lg" href="{{ url_for("cafes") }}" role="button">List of Cafes</a>
+		
+			<a class="btn btn-dark btn-lg " href="{{ url_for( "add_cafe" ) }}" role = "button">Add more!</a>
+		</br>
+
+	</div>	
+
+{% endblock %}
