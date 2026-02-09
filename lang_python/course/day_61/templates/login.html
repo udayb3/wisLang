@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	
+		<title>Login</title>
+		<link
+			href="../static/style.css"	rel="stylesheet"
+		/>
+	
+	</head>
+	<body>
+
+		<div class="container">
+		<h1>Login</h1>
+			<hr>
+				<form action="{{url_for('login')}}" method="post">
+					{{form.csrf_token}}
+					<p>
+						{{	form.username.label }}  </br> {{ form.username(size=20) }}
+					</p>
+					<p>
+						{{	form.mail.label	}} </br> {{ form.mail(size=20)}}
+					</p>
+					<p>
+						{{form.password.label }} </br> {{ form.password(size=20) }}
+					</p>
+					{{ form.submit }}
+				</form>
+        </div>
+	</body>
+</html>

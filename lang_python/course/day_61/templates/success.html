@@ -1,0 +1,21 @@
+<!-- Extending the base template for the pages -->
+{% extends "base.html"  %}
+
+<!-- Inserting the data in the title block -->
+{% block title %}
+	Success
+{% endblock %}
+
+<!-- Inserting the content of the success html file in the content block -->
+{% block content %}
+
+	<div class="container">
+
+		<h1>Top Secret </h1>
+		<h2>Congratulations, you have passed the test. Get trolled.</h2>
+		<iframe src="https://giphy.com/embed/Ju7l5y9osyymQ" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+		<p><a href="https://giphy.com/gifs/rick-astley-Ju7l5y9osyymQ">via GIPHY</a></p>
+	
+	</div>	
+
+{% endblock %}

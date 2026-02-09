@@ -1,0 +1,11 @@
+Capstone Project- Data entry job
+
+The entry job is a research type where we are researching house prices which fit a particular criteria on the Zillow website and transfer the data to the spreadsheet[	Preferrably by Pandas ].
+Sprecifics :
+	1. the price should be less han or equal to 3000.
+	2. It should have at least one bedroom.
+	3. The room should be for rent not for sale.
+	Use beautifulsoup for the below operations:
+	4. The data parameter we want are name, address, price, url.
+	Use selenium for the below work: 
+	5. we will fill the form by using selenium. 

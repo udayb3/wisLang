@@ -3,3 +3,6 @@
 
 */**/z_extra/*
 z_extra/**/*
+
+# ignoring python extras
+__pycache__

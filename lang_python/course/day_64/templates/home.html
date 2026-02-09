@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}My Top 10 Movies{% endblock %}
+
+{% block content %}
+<div class="container overlay-text">
+  <h1 class="">My Top 10 {{ DB }}</h1>
+  <hr style="height: 3px; color: black; background-color: darkblue">
+  <p class="description align-content-center">These are my all-time favourite {{ DB }}.</p>
+    {% set   coun=10 %}
+    {% for row in data %}
+      <div class="card" >
+        <div class="front" style="background-image: url( {{ row.url }} );">
+            <p class="large">{{ loop.index }}</p>
+        </div>
+        <div class="back">
+          <div class="title"> {{ row.Title }} </div>
+          <div class="release_date">({{row.Year}})</div>
+          <div class="creator">
+            <label>{{ row.Creator }}</label>
+          </div>
+          <div class="rating">
+              <label>{{ row.Rating }}</label>
+            <i class="fas fa-star star"></i>
+          </div>
+            <p class="review">{{ row.One_liner }}</p>
+            <p class="overview">
+              {{ row.Description }}
+            </p>
+            <div>
+              <a href="{{ url_for( 'update' , id=row.id , name=DB ) }}" class="button">Update</a>
+              <a href="{{ url_for( 'delete' , id=row.id , name=DB ) }}" class="button delete-button">Delete</a>
+            </div>
+        </div>
+      </div>
+      {% set coun=coun-1 %}
+    {% endfor%}
+</div>
+<div class="container text-center add">
+<a href="{{ url_for( 'add' , DB=DB ) }}" class="button">Add {{ DB }}</a>
+</div>
+
+{% endblock %}
