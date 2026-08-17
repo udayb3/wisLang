@@ -1,2 +1,6 @@
 # ignoring .class files
 */**/*.class
+
+# ignoring directories
+*/**/z_extra
+z_extra
