@@ -15,25 +15,11 @@ Compute Unified Device Architecture is
 ```cuda
 __global__ void myKernel(int *a, int *b, int *c, int N) {
     // code is put here
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 }
 
 int main() {
     Serial code is put here 
 }
-=======
-=======
->>>>>>> 2ebadbbf976f7b1103cc16625282bee523cdddcb
-\}
-
-int main() {
-    Serial code is put here 
-\}
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> 2ebadbbf976f7b1103cc16625282bee523cdddcb
 ```
 - In the above code, /_/_global/_/_ shows that the method runs on Device.
 - Device methods are processed by **Nvidia compiler** and Host methods are processed by **cpu**.
@@ -66,11 +52,6 @@ mykernel<<< # of blocks , # of threads per block  >>>();
   - **Scalability**: # of threads is limited
   - **Communication**: Concept of shared memory
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 2ebadbbf976f7b1103cc16625282bee523cdddcb
 ### Concept of Shared Memory
 - This is shared by all the threads within a block. It's access time is less.
 - Declaration is done as below:
@@ -79,8 +60,8 @@ mykernel<<< # of blocks , # of threads per block  >>>();
     __shared__ int x;
     for ( int i=0; i<8;i++ ) {
       x= i;
-    \}
-  \}
+    }
+  }
   ```
 - A good example in this is the concept of Stencils
   ```cuda
@@ -100,7 +81,7 @@ mykernel<<< # of blocks , # of threads per block  >>>();
     int res=0;
     for ( int i=-RADIUS;i<=RADIUS;i++ ) {
       res += t1[ i + shind ];
-    \}
+    }
     out[genind]= res;
   \}
   ```
@@ -121,9 +102,3 @@ mykernel<<< # of blocks , # of threads per block  >>>();
 
 ### Launch Configuration
 - The latency in the case of GPU's is hidden inside the SM's.
-<<<<<<< HEAD
-- 
->>>>>>> Stashed changes
-=======
-- 
->>>>>>> 2ebadbbf976f7b1103cc16625282bee523cdddcb
