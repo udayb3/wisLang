@@ -1,0 +1,12 @@
+.gr {
+	background-color:teal;
+}
+._main {
+	background-color:teal;
+	border: 5px black;
+	align-self: center;
+	width: 50%;
+	margin-top:20%;
+	margin-left:25%; 
+
+}
